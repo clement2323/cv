@@ -6,3 +6,8 @@ next js nest js react.., geoserver
 - parler de boutade, automation plan pour les enquetes menages()
 - mettre des verbes au prétérit ?
 - DIRAG -> parler du projet
+
+## TO, DO hors CV :
+- nettoyer github
+- nettoyer linkedin
+- contacter boites françaises aussi?, indeed !
