@@ -3,33 +3,32 @@ author: Clement Guillo
 title: Data Scientist
 format:
   classic-cv-pdf: default
-  html:
-    css: styles.css
-    toc: false
 cvfooter:
-  left: "c.guillo.fr"
-  right: "github.com/clement2323"
-cvcolor: 58748F
-cvfont: raleway
+  left: ""
+  right: ""
+cvcolor: 58748F #without `#`
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvmeta:
   - title: Status
-    left: Team Lead for Transparent Social Analytics, GESIS
-    right: Cologne, Germany
+    left: Head of Statistical Service at INSEE Antilles-Guyane
+    right: Guadeloupe, France
   - title: Field
-    left: Software Engineering, Data Science
-    right: mr.schochastics.net
-  - title: Techs
-    left: R, bash, Python, javascript, Lua
-    right: guillo.clement@gmail.com
+    left: Data Science, Statistical Methods, Spatial Analysis 
+    right: /in/clgui23
+  - left:  +33 6 19 93 25 36
+    right: github.com/clement2323  
 execute:
   echo: false
 ---
 
+
 ```{r}
+
 #| label: cvevents
 cvevents <- function(tbl, when, what, where, details) {
-  if (knitr::is_latex_output()) {
+
     command_start <- "\\cvevent"
+
     res <- paste0(
         command_start, "{", tbl[[when]], "}", 
         "{", tbl[[what]], "}",
@@ -37,62 +36,151 @@ cvevents <- function(tbl, when, what, where, details) {
     
     tbl[[details]] <- sapply(tbl[[details]], function(x) paste0("{", x, "}", collapse = ","))
     res <- paste0(res, "{",tbl[[details]],"}")
-    
+
     cat(res, sep = "\n")
-  } else {
-    # HTML output
-    for(i in 1:nrow(tbl)) {
-      cat('<div class="cv-event">\n')
-      cat('  <div class="cv-event-header">\n')
-      cat('    <div>\n')
-      cat('      <span class="cv-event-title">', tbl[[what]][i], '</span>\n')
-      cat('      <span class="cv-event-institution"> - ', tbl[[where]][i], '</span>\n')
-      cat('    </div>\n')
-      cat('    <span class="cv-event-date">', tbl[[when]][i], '</span>\n')
-      cat('  </div>\n')
-      cat('  <ul class="cv-event-details">\n')
-      for(detail in tbl[[details]][[i]]) {
-        cat('    <li>', detail, '</li>\n')
-      }
-      cat('  </ul>\n')
-      cat('</div>\n')
-    }
-  }
+}
+
+cvskills <- function(tbl, category, skills) {
+    command_start <- "\\cvskills"
+
+    # Agrège les skills par catégorie
+    unique_categories <- unique(tbl[[category]])
+    
+    res <- sapply(unique_categories, function(cat) {
+        skills_list <- tbl[tbl[[category]] == cat, ][[skills]]
+        skills_formatted <- paste0("{", paste(skills_list, collapse = "},{"), "}")
+        
+        paste0(
+            command_start,
+            "{", cat, "}",
+            "{", skills_formatted, "}"
+        )
+    })
+
+    cat(res, sep = "\n")
 }
 ```
 
-# Summary
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-# Experience
+# Profile
 
+Data Scientist with extensive experience in spatial statistics and deep learning applications, seeking challenging position in statistical methodology and data analysis. Proven track record in implementing large-scale data processing solutions and leading cross-functional teams.
+
+# Professional Experience
 
 ```{r}
 #| label: experience
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
-    "Team Lead", "GESIS - Leibniz Institute for the Social Sciences", "Mar. 2022 - Present",
-    "Transparent Social Analytics, Department of Computational Social Science", c("Coordination of a project to build an Open Science platform with reusable code and tutorials", "Research on Open Science Practices", "Implementation of tools to enhance reproducibility and facilitate research with digital data in R"),
-    "Presidential Fellow", "University of Manchester", "Sep. 2018 - Feb. 2022",
-    "Sociology Department", c("Research on Disinformation on Social Media", "Analyses of large scale and unstructured data sets with R, Python and Bash"),
-    "Post Doctoral Researcher", "ETH Zurich", "Nov. 2017 - Aug. 2018", "Chair of Social Networks", c("Developing new methods to analyze social networks", "Implementing methods in libraries", "Gathering and analyzing large datsets from Social Media APIs"),
-    "Post Doctoral Researcher", "University of Konstanz", "Oct. 2015 - Oct. 2017", "Department of Computer & Information Science", c("Developing new methods to analyze social networks", "Implementing methods in libraries", "Webscraping and harmonizing a large corpus of football data"),
-    "Ph.D. Candidate", "University of Konstanz", "Nov. 2012 - Sep. 2015", "Department of Computer & Information Science", c("Developing new methods to analyze social networks", "Implementing methods in libraries")
+    "Head of Statistical Service", "INSEE - Caribbean", "09/2023 - Present",
+    "Guadeloupe, France", c(
+        "Modernized production practices across three territories, resulting in a 25\\% improvement in efficiency.",
+        "Applied machine learning algorithms for population census, processing over 100,000 satellite images.",
+        "Designed and delivered an R training program for more than 20 staff members."
+    ),
+    "Head of Spatial Statistics Methods", "INSEE - Paris", "09/2019 - 08/2023",
+    "Paris, France", c(
+        "Led the development of deep learning models achieving a 90\\% accuracy in satellite image segmentation.",
+        "Directed the redesign of a georeferencing system impacting 67 million address records.",
+        "Supervised statistical disclosure control for over 500 business surveys annually."
+    ),
+    "Data Science Intern", "WESTAT - Rockville MD, USA", "07/2019 - 09/2019",
+    "Rockville, Maryland, USA", c(
+        "Developed innovative estimation methods for rare events using Zero-Inflated Poisson Models.",
+        "Analyzed large-scale imbalanced datasets with more than 100,000 observations.",
+        "Implemented an EM algorithm, improving prediction accuracy by 15\\%."
+    ),
+    "Household Survey Manager", "INSEE - Paris", "09/2017 - 08/2018",
+    "Paris, France", c(
+        "Optimized an R codebase, reducing processing time by 40\\%.",
+        "Managed the redesign of the Master Sample, affecting over 200,000 households.",
+        "Coordinated a team of five statisticians for large-scale simulations."
+    ),
+    "Financial Institutions Account Manager", "INSEE - Paris", "09/2014 - 08/2017",
+    "Paris, France", c(
+        "Conducted financial data analyses for over 1,000 institutions.",
+        "Produced quarterly statistical reports for national accounts.",
+        "Developed automated procedures for data validation."
+    )
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
+
 ```
 
 # Education
 
-```{r }
+```{r}
 #| label: education
 #| output: asis
 tibble::tribble(
-    ~degree, ~uni, ~loc, ~dates, ~details,
-    "Ph.D. in Computer Science", "University of Konstanz", "Konstanz, Germany", "Nov. 2012 - Sep. 2015", c("Thesis: A Positional Approach for Network Centrality", "Developed and implemented new methods to assess network centrality"),
-    "Diploma in Business Mathematics", "KIT", "Karlsruhe, Germany", "Sep. 2006 - Jul. 2012", c("Thesis: Modularity Maximization", "Implementation and comparison of different clustering algorithms using Matlab")
+    ~degree, ~loc, ~dates, ~details,
+    "Master of Research in Mathematics, Vision and Learning (MVA)", "ENS - Paris, France", "09/2019 - 08/2020", c(
+        "Highest Honors",
+        "Specialized in machine learning and computer vision",
+        "Research thesis on statistical models for database fusion",
+        "Deep learning, Reinforcement learning"
+    ),
+    
+    "Statistical Methodology Master", "ENSAE - Paris, France", "09/2018 - 08/2020", c(
+        "Highest Honors",
+        "Advanced coursework in statistical methods and data analysis",
+        "Time series analysis, sampling survey methodology"
+    ),
+    
+    "Engineering Degree in Statistics and p", "ENSAI - Rennes, France", "09/2011 - 08/2013", c(
+        "Core curriculum in statistical methods and programming",
+        "Specialized in data processing and analysis",
+        "Teaching Assistant for Statistics and Python courses"
+    )
 ) |>
     cvevents(when = "dates", what = "degree", where = "loc", details = "details")
+```
+
+# Projects
+
+```{r}
+#| label: Projects & Achievements
+#| output: asis
+tibble::tribble(
+    ~project, ~institution, ~dates, ~details,
+    "Research Project", "ENSAE engineer school - PARIS", "2019 - 2020", c(
+        "Developed novel statistical models for database fusion",
+        "Published findings in departmental research journal",
+        "Presented results at student research symposium"
+    ),
+    
+    "Hackathon Winner", "EY Paris", "2018", c(
+        "Led team of 4 to victory among 50 \\% competing teams",
+        "Developed machine learning model with 85 \\% prediction accuracy",
+        "Implemented solution using Random Forests in Python"
+    )
+) |>
+    cvevents(when = "dates", what = "project", where = "institution", details = "details")
+```
+
+# Skills
+```{r}
+#| label: skills
+#| output: asis
+#| 
+# Exemple de données
+#| label: skills
+#| output: asis
+
+skills_data <- tibble::tribble(
+  ~category,      ~skills,
+  "Languages",    "French (Native)",
+  "Languages",    "English (B2) (TOEIC 895/990)",
+  "Languages",    "Espagnol",
+  "Programming",  "Python (Expert), R (Advanced), SQL (Advanced)",
+  "Programming",  "Docker, kubernetes, MLOPS",
+  "Programming",  "Web Development, Javascript React, NextJS"
+)
+
+# Générer le LaTeX
+skills_data |>
+  cvskills(category = "category", skills = "skills")
+
 ```
