@@ -15,9 +15,8 @@ cvmeta:
   - title: Field
     left: Data Science, Statistical Methods, Spatial Analysis 
     right: /in/clgui23
-  - title: Techs
-    left: R,Python (Scipy pytorch), Web Developpement (NextJs, React) docker, kubernetes, R, C++, Java, SQL, PostGIS
-    right: guillo.clement@gmail.com  github.com/clement2323 +33 (0)6 19 93 25 36  guillo.clement@gmail.com
+  - left:  +33 6 19 93 25 36
+    right: github.com/clement2323  
 execute:
   echo: false
 ---
@@ -155,8 +154,8 @@ tibble::tribble(
     ),
     
     "Hackathon Winner", "EY Paris", "2018", c(
-        "Led team of 4 to victory among 50\\% competing teams",
-        "Developed machine learning model with 85% prediction accuracy",
+        "Led team of 4 to victory among 50 \\% competing teams",
+        "Developed machine learning model with 85 \\% prediction accuracy",
         "Implemented solution using Random Forests in Python"
     )
 ) |>
@@ -175,11 +174,11 @@ tibble::tribble(
 skills_data <- tibble::tribble(
   ~category,      ~skills,
   "Languages",    "French (Native)",
-  "Languages",    "English (C1)",
-  "Languages",    "German (B2)",
-  "Programming",  "Python (Expert)",
-  "Programming",  "R (Advanced)",
-  "Programming",  "SQL (Advanced)"
+  "Languages",    "English (B2) (TOEIC 895/990)",
+  "Languages",    "Espagnol",
+  "Programming",  "Python (Expert), R (Advanced), SQL (Advanced)",
+  "Programming",  "Docker, kubernetes, MLOPS",
+  "Programming",  "Web Development, Javascript React, NextJS"
 )
 
 # Générer le LaTeX

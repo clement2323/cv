@@ -154,7 +154,11 @@
 \footnotesize{#2} \hspace*{\fill} \footnotesize{#1}\\[1pt]
 }
 
-
+% Nouvelle commande pour les éléments sans titre
+\newcommand{\metameta}[2]
+{
+\footnotesize{#1} \hspace*{\fill} \footnotesize{#2}\\[12pt]
+}
 %----------------------------------------------------------------------------------------
 %	 CV SKILLS
 %----------------------------------------------------------------------------------------
@@ -226,8 +230,8 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE \textsc{$author$} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \\[2pt]
-	\small $title$
+	\HUGE \textsc{$author$} \\[2pt]
+	\huge $title$
 \end{center}
 
 \vspace{6pt}
@@ -236,8 +240,13 @@
 %	META SECTION
 %----------------------------------------------------------------------------------------
 $for(cvmeta)$
+$if(cvmeta.title)$
 \metasection{$cvmeta.right$}{\textbf{$cvmeta.title$}: $cvmeta.left$}
+$else$
+\metameta{$cvmeta.left$}{$cvmeta.right$}
+$endif$
 $endfor$
+
 
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
@@ -247,13 +256,5 @@ $endfor$
 
 \vspace{-6pt}
 $body$
-
-%--------------------------------------------------------------------------------------------------
-%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
-%--------------------------------------------------------------------------------------------------
-
-\null
-\vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{$cvfooter.left$}  *  \textcolor{sectcol}{$cvfooter.right$}}}}
 
 \end{document}
