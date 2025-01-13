@@ -11,3 +11,10 @@ next js nest js react.., geoserver
 - nettoyer github
 - nettoyer linkedin
 - contacter boites françaises aussi?, indeed !
+
+
+## mettre les regles de CV de kathleen 
+## Projets :
+
+
+
