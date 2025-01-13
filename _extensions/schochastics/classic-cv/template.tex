@@ -154,6 +154,30 @@
 \footnotesize{#2} \hspace*{\fill} \footnotesize{#1}\\[1pt]
 }
 
+
+%----------------------------------------------------------------------------------------
+%	 CV SKILLS
+%----------------------------------------------------------------------------------------
+
+% creates a bullet list for skills
+% param 1: category name
+% param 2: list of skills
+\newcommand{\cvskills}[2]
+{
+\begin{tabular*}{1\textwidth}{p{13.6cm}}
+    \textbf{#1}
+\end{tabular*}
+
+\vspace{-8pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+\foreach \desc in {#2}{
+    {\scalebox{0.67}{\textbullet}}\hspace{1em}\desc\\[3pt]
+}
+    
+\vspace{3pt}
+}
+
 %----------------------------------------------------------------------------------------
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
@@ -176,9 +200,8 @@
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
 \foreach \desc in {#4}{
-	*  \desc\\[3pt]
+	{\scalebox{0.67}{\textbullet}}\hspace{1em}  \desc\\[3pt]
 }
-	
 \vspace{3pt}
 }
 
@@ -203,7 +226,7 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE \textsc{$author$} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}\\[2pt]
+	\HUGE \textsc{$author$} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \\[2pt]
 	\small $title$
 \end{center}
 

@@ -1,15 +1,30 @@
 ---
-author: Clément Guillo
+author: Clement Guillo
+title: Data Scientist
 format:
   classic-cv-pdf: default
-cvcolor: 58748F
-cvfont: raleway
+cvfooter:
+  left: ""
+  right: ""
+cvcolor: 58748F #without `#`
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvmeta:
+  - title: Status
+    left: Head of Statistical Service at INSEE Antilles-Guyane
+    right: Guadeloupe, France
+  - title: Field
+    left: Data Science, Statistical Methods, Spatial Analysis 
+    right: /in/clgui23
+  - title: Techs
+    left: R,Python (Scipy pytorch), Web Developpement (NextJs, React) docker, kubernetes, R, C++, Java, SQL, PostGIS
+    right: guillo.clement@gmail.com  github.com/clement2323 +33 (0)6 19 93 25 36  guillo.clement@gmail.com
 execute:
   echo: false
 ---
 
 
 ```{r}
+
 #| label: cvevents
 cvevents <- function(tbl, when, what, where, details) {
 
@@ -25,26 +40,35 @@ cvevents <- function(tbl, when, what, where, details) {
 
     cat(res, sep = "\n")
 }
+
+cvskills <- function(tbl, category, skills) {
+    command_start <- "\\cvskills"
+
+    # Agrège les skills par catégorie
+    unique_categories <- unique(tbl[[category]])
+    
+    res <- sapply(unique_categories, function(cat) {
+        skills_list <- tbl[tbl[[category]] == cat, ][[skills]]
+        skills_formatted <- paste0("{", paste(skills_list, collapse = "},{"), "}")
+        
+        paste0(
+            command_start,
+            "{", cat, "}",
+            "{", skills_formatted, "}"
+        )
+    })
+
+    cat(res, sep = "\n")
+}
 ```
 
 
-+33 (0)6 19 93 25 36
-guillo.clement@gmail.com
-linkedin.com/in/clgui23
-github.com/clement2323
 
 # Profile
 
 Data Scientist with extensive experience in spatial statistics and deep learning applications, seeking challenging position in statistical methodology and data analysis. Proven track record in implementing large-scale data processing solutions and leading cross-functional teams.
 
-# Core Skills
-
-- Statistical Analysis: Spatial statistics, Deep Learning, Time series analysis
-- Programming: Python, R, C++, Java, SQL, PostGIS
-- Development: JavaScript, React, NextJS
-- Tools: LaTeX, Linux, Git
-
-# Professional Experience
+# Professional
 
 ```{r}
 #| label: experience
@@ -53,14 +77,14 @@ tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
     "Head of Statistical Service", "INSEE Antilles-Guyane", "09/2023 - Present",
     "Guadeloupe, France", c(
-        "Modernized production practices across 3 territories, improving efficiency by 25%",
+        "Modernized production practices across 3 territories, improving efficiency by 25 \\%",
         "Implemented machine learning algorithms for population census, processing 100,000+ satellite images",
         "Developed and delivered R training program for 20+ staff members"
     ),
     
     "Head of Spatial Statistics Methods", "INSEE", "09/2019 - 08/2023",
     "Paris, France", c(
-        "Led development of deep learning models achieving 90% accuracy in satellite image segmentation",
+        "Led development of deep learning models achieving 90\\% accuracy in satellite image segmentation",
         "Managed redesign of georeferencing system affecting 67 million addresses",
         "Supervised statistical disclosure control for 500+ business surveys annually"
     ),
@@ -69,12 +93,12 @@ tibble::tribble(
     "Rockville, Maryland, USA", c(
         "Developed alternative estimation methods for rare events using Zero-Inflated Poisson Models",
         "Analyzed imbalanced datasets with 100,000+ observations",
-        "Implemented EM algorithm improving prediction accuracy by 15%"
+        "Implemented EM algorithm improving prediction accuracy by 15 \\%"
     ),
     
     "Household Survey Manager", "INSEE", "09/2017 - 08/2018",
     "Paris, France", c(
-        "Optimized R codebase reducing processing time by 40%",
+        "Optimized R codebase reducing processing time by 40 \\%",
         "Managed redesign of Master Sample affecting 200,000+ households",
         "Coordinated team of 5 statisticians for large-scale simulations"
     ),
@@ -117,7 +141,7 @@ tibble::tribble(
     cvevents(when = "dates", what = "degree", where = "loc", details = "details")
 ```
 
-# Projects & Achievements
+# Projects
 
 ```{r}
 #| label: Projects & Achievements
@@ -131,7 +155,7 @@ tibble::tribble(
     ),
     
     "Hackathon Winner", "EY Paris", "2018", c(
-        "Led team of 4 to victory among 50+ competing teams",
+        "Led team of 4 to victory among 50\\% competing teams",
         "Developed machine learning model with 85% prediction accuracy",
         "Implemented solution using Random Forests in Python"
     )
@@ -139,3 +163,27 @@ tibble::tribble(
     cvevents(when = "dates", what = "project", where = "institution", details = "details")
 ```
 
+# Skills
+```{r}
+#| label: skills
+#| output: asis
+#| 
+# Exemple de données
+#| label: skills
+#| output: asis
+
+skills_data <- tibble::tribble(
+  ~category,      ~skills,
+  "Languages",    "French (Native)",
+  "Languages",    "English (C1)",
+  "Languages",    "German (B2)",
+  "Programming",  "Python (Expert)",
+  "Programming",  "R (Advanced)",
+  "Programming",  "SQL (Advanced)"
+)
+
+# Générer le LaTeX
+skills_data |>
+  cvskills(category = "category", skills = "skills")
+
+```
