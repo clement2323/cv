@@ -129,7 +129,7 @@ tibble::tribble(
         "Time series analysis, sampling survey methodology"
     ),
     
-    "Engineering Degree in Statistics", "ENSAI - Rennes, France", "09/2011 - 08/2013", c(
+    "Engineering Degree in Statistics and p", "ENSAI - Rennes, France", "09/2011 - 08/2013", c(
         "Core curriculum in statistical methods and programming",
         "Specialized in data processing and analysis",
         "Teaching Assistant for Statistics and Python courses"
