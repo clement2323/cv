@@ -1,0 +1,64 @@
+:root {
+  --cv-primary-color: #58748F;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--cv-primary-color);
+  border-bottom: 2px solid var(--cv-primary-color);
+  padding-bottom: 5px;
+}
+
+.cv-event {
+  margin-bottom: 20px;
+}
+
+.cv-event-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.cv-event-title {
+  font-weight: bold;
+}
+
+.cv-event-date {
+  color: var(--cv-primary-color);
+}
+
+.cv-event-institution {
+  color: #666;
+}
+
+.cv-event-details {
+  margin-left: 20px;
+}
+
+.cv-event-details li {
+  margin-bottom: 5px;
+}
+
+.cv-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cv-meta-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--cv-primary-color);
+} 

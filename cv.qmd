@@ -3,11 +3,14 @@ author: Clement Guillo
 title: Data Scientist
 format:
   classic-cv-pdf: default
+  html:
+    css: styles.css
+    toc: false
 cvfooter:
   left: "c.guillo.fr"
   right: "github.com/clement2323"
-cvcolor: 58748F #without `#`
-cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 58748F
+cvfont: raleway
 cvmeta:
   - title: Status
     left: Team Lead for Transparent Social Analytics, GESIS
@@ -25,9 +28,8 @@ execute:
 ```{r}
 #| label: cvevents
 cvevents <- function(tbl, when, what, where, details) {
-
+  if (knitr::is_latex_output()) {
     command_start <- "\\cvevent"
-
     res <- paste0(
         command_start, "{", tbl[[when]], "}", 
         "{", tbl[[what]], "}",
@@ -35,8 +37,27 @@ cvevents <- function(tbl, when, what, where, details) {
     
     tbl[[details]] <- sapply(tbl[[details]], function(x) paste0("{", x, "}", collapse = ","))
     res <- paste0(res, "{",tbl[[details]],"}")
-
+    
     cat(res, sep = "\n")
+  } else {
+    # HTML output
+    for(i in 1:nrow(tbl)) {
+      cat('<div class="cv-event">\n')
+      cat('  <div class="cv-event-header">\n')
+      cat('    <div>\n')
+      cat('      <span class="cv-event-title">', tbl[[what]][i], '</span>\n')
+      cat('      <span class="cv-event-institution"> - ', tbl[[where]][i], '</span>\n')
+      cat('    </div>\n')
+      cat('    <span class="cv-event-date">', tbl[[when]][i], '</span>\n')
+      cat('  </div>\n')
+      cat('  <ul class="cv-event-details">\n')
+      for(detail in tbl[[details]][[i]]) {
+        cat('    <li>', detail, '</li>\n')
+      }
+      cat('  </ul>\n')
+      cat('</div>\n')
+    }
+  }
 }
 ```
 
