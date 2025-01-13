@@ -8,4 +8,8 @@ contributes:
       filters: 
         - styles.lua
       template: template.tex
-
+    html:
+      theme: cosmo
+      css: styles.css
+      toc: false
+      page-layout: full

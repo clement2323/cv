@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$author$ - CV</title>
+  $for(css)$
+  <link rel="stylesheet" href="$css$" />
+  $endfor$
+  <style>
+    :root {
+      --sectcol: #$cvcolor$;
+      --bgcol: rgb(110,110,110);
+      --softcol: rgb(225,225,225);
+    }
+  </style>
+</head>
+<body>
+
+<div class="cv-container">
+  <!-- Title Section -->
+  <header>
+    <h1 class="author">$author$</h1>
+    <div class="title">$title$</div>
+  </header>
+
+  <!-- Meta Section -->
+  <div class="meta-section">
+    $for(cvmeta)$
+    $if(cvmeta.title)$
+    <div class="meta-row">
+      <span class="meta-left"><strong>$cvmeta.title$:</strong> $cvmeta.left$</span>
+      <span class="meta-right">$cvmeta.right$</span>
+    </div>
+    $else$
+    <div class="meta-row">
+      <span class="meta-left">$cvmeta.left$</span>
+      <span class="meta-right">$cvmeta.right$</span>
+    </div>
+    $endif$
+    $endfor$
+  </div>
+
+  <hr class="soft-rule"/>
+
+  <!-- Main Content -->
+  <main>
+    $body$
+  </main>
+</div>
+
+</body>
+</html>

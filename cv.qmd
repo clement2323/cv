@@ -145,7 +145,7 @@ tibble::tribble(
 #| output: asis
 tibble::tribble(
     ~project, ~institution, ~dates, ~details,
-    "Research Project", "ENSAE", "2019 - 2020", c(
+    "Research Project", "ENSAE engineer school - PARIS", "2019 - 2020", c(
         "Developed novel statistical models for database fusion",
         "Published findings in departmental research journal",
         "Presented results at student research symposium"

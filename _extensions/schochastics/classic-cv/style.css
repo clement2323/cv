@@ -1,0 +1,105 @@
+/* Base styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .author {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Meta Section */
+  .meta-section {
+    margin-bottom: 1rem;
+  }
+  
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .soft-rule {
+    border: none;
+    height: 1px;
+    background-color: var(--softcol);
+    margin: 1rem 0;
+  }
+  
+  /* CV Sections */
+  h1 {
+    color: var(--sectcol);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem;
+  }
+  
+  /* CV Events */
+  .cv-event {
+    margin-bottom: 1.5rem;
+  }
+  
+  .cv-event-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--softcol);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cv-event-title {
+    font-weight: bold;
+  }
+  
+  .cv-event-institution {
+    color: var(--bgcol);
+  }
+  
+  .cv-event-date {
+    color: var(--sectcol);
+  }
+  
+  /* CV Skills */
+  .cv-skills {
+    margin-bottom: 1.5rem;
+  }
+  
+  .cv-skills-title {
+    font-weight: bold;
+    border-bottom: 1px solid var(--softcol);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Bullet points */
+  ul {
+    list-style: none;
+    padding-left: 1.5em;
+  }
+  
+  ul li::before {
+    content: "•";
+    font-size: 0.67em;
+    color: var(--text-color);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
