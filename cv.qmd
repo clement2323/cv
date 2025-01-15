@@ -64,7 +64,7 @@ cvskills <- function(tbl, category, skills) {
 
 # Profile
 
-Data Scientist with extensive experience in spatial statistics and deep learning applications, seeking position in data-science. Proven track record in implementing large-scale data processing solutions and leading cross-functional teams.
+Innovative Data Scientist with a strong foundation in spatial statistics, machine learning, and big data processing. Extensive experience developing and deploying data-driven solutions, including deep learning applications for satellite imagery analysis and automation of complex workflows. Proven ability to lead cross-functional teams and deliver impactful insights at scale. Skilled in designing end-to-end pipelines, leveraging advanced statistical methods, and managing large-scale datasets in high-performance environments. Actively seeking opportunities to contribute to data science teams driving innovation and tackling complex challenges in California’s dynamic tech ecosystem.
 
 # Professional Experience
 
@@ -77,32 +77,32 @@ tibble::tribble(
     "Guadeloupe, France", c(
         "Developed and applied deep learning algorithms for population census by processing thousands of satellite images of overseas territories (including Réunion and Mayotte). Delivered a trained segmentation model based on these images and deployed the results through an application to support population census (RP) estimates.",
         "Streamlined and automated production practices across three territories (Guadeloupe, Martinique, Guyane), coordinating efforts across diverse teams.",
-        "Managed INSEE agents across three territories (Guadeloupe, Martinique, Guyane), overseeing the coordination and execution of on-the-ground survey operations."
+        "Managed INSEE agents across three territories (Guadeloupe, Martinique, Guyane), overseeing the coordination and execution of on-the-ground survey operations.",
         "Designed an R training program, aimed at improving the skills of 20 Caribbean area agents."
     ),
-    "Head of Spatial Statistics Methods and Data Protection Methods (Statistical Disclosure Control).", "INSEE - Paris", "09/2019 - 08/2023",
+    "Head of Spatial Statistics \\& Data Confidentiality Methods", "INSEE - Paris", "09/2019 - 08/2023",
     "Paris, France", c(
         "Managed a team of 4 members and supervised 3 interns focused on satellite image analysis.",
         "Led the development of deep learning models achieving high accuracy in satellite image segmentation for land cover detection.",
         "Directed the redesign of a georeferencing system impacting 30 million address records.",
         "Designed and implemented an algorithm to ensure the confidentiality of gridded data across the entirety of France, addressing differentiation attacks and enabling large-scale data dissemination.",
-        "Supervised statistical disclosure control for 20 public statistics surveys conducted annually by INSEE.",
+        "Supervised statistical disclosure control for 10 public statistics surveys conducted annually by INSEE."
     ),
     "Data Science Intern", "WESTAT - Rockville MD, USA", "07/2019 - 09/2019",
     "Rockville, Maryland, USA", c(
         "Developed innovative estimation methods for rare events using Zero-Inflated Poisson Models.",
-        "Analyzed large-scale imbalanced datasets with more than 100,000 observations.",
-        "Implemented an EM algorithm, improving prediction accuracy by"
+        "Analyzed large-scale imbalanced datasets."
     ),
     "Household Survey Manager", "INSEE - Paris", "09/2017 - 08/2018",
     "Paris, France", c(
-        "Contributed to the redesign of the Master Sample, representing the nationwide household sampling framework for INSEE surveys. Conducted large-scale sampling", "Simulations for the entirety of France using advanced sampling methods. The proposed solution, now deployed at INSEE, directly impacts the work of nearly 700 field interviewers.", 
+        "Contributed to the redesign of the Master Sample, representing the nationwide household sampling framework for INSEE surveys.",
+        "Conducted large-scale sampling simulations for the entirety of France using advanced sampling methods. The proposed solution, now deployed at INSEE, directly impacts the work of nearly 700 field interviewers.", 
         "Worked closely with a team of five statisticians to parallelize processing workflows and analyze results, including variance estimation"
     ),
     "Financial Institutions Account Manager", "INSEE - Paris", "09/2014 - 08/2017",
     "Paris, France", c(
-        "Proposed and implemented a modernization of the national accounts construction process for financial institutions, which operates iteratively.",
-        "Optimized the iteration time, reducing it from 40 minutes to just 2 minutes per cycle, significantly improving efficiency."
+        "Proposed and implemented a modernization of the national accounts construction process for financial institutions",
+        "Optimized the iteration time, reducing it from 40 minutes to just 2 minutes per cycle, significantly improving efficiency.",
         "Produced quarterly statistical reports for national accounts."
     )
 ) |>
@@ -170,14 +170,12 @@ tibble::tribble(
     ),
     
     "Hackathon Winner", "EY Paris", "2018", c(
-        "Led team of 4 to victory among 50 \\% competing teams.",
-        "Developed machine learning model with 85 \\% prediction accuracy.",
+        "Led team of 4 to victory among  20 competing teams.",
         "Implemented solution using Random Forests in Python."
-    ,
+    ),
     "Master’s Thesis: Statistical Methodology for Smoothing Insurance Claims", "ENSAI engineer school - PARIS", "2020", c(
         "Developed advanced smoothing methods for insurance claims data using Kalman Filters.",
-        "Proposed innovative approaches for time-series modeling and forecasting of indemnities.",
-        "Presented findings to faculty and insurance industry professionals."
+        "Proposed innovative approaches for time-series modeling and forecasting of indemnities."
     )
 ) |>
     cvevents(when = "dates", what = "project", where = "institution", details = "details")
