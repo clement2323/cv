@@ -86,7 +86,8 @@ tibble::tribble(
         "Led the development of deep learning models achieving high accuracy in satellite image segmentation for land cover detection.",
         "Directed the redesign of a georeferencing system impacting 30 million address records.",
         "Designed and implemented an algorithm to ensure the confidentiality of gridded data across the entirety of France, addressing differentiation attacks and enabling large-scale data dissemination.",
-        "Supervised statistical disclosure control for 10 public statistics surveys conducted annually by INSEE."
+        "Supervised statistical disclosure control for 10 public statistics surveys conducted annually by INSEE.",
+        "Collaborated with European countries in working groups to harmonize methodologies for spatial analysis and statistical disclosure control at the European level."
     ),
     "Data Science Intern", "WESTAT - Rockville MD, USA", "07/2019 - 09/2019",
     "Rockville, Maryland, USA", c(
@@ -129,11 +130,18 @@ tibble::tribble(
         "Advanced coursework in statistical methods and data analysis",
         "Time series analysis, sampling survey methodology"
     ),
-    
+        "Master’s Thesis", "ENSAE engineer school - PARIS", "2019 - 2020", c(
+        "Developed novel statistical models for database fusion."
+    ),
     "Engineering Degree in Statistics and Probabilities", "ENSAI - Rennes, France", "09/2011 - 08/2013", c(
         "Core curriculum in statistical methods and programming",
         "Specialized in data processing and analysis",
         "Teaching Assistant for Statistics and Python courses"
+    ),
+    "Master’s Thesis", "ENSAI engineer school - PARIS", "2014", c(
+        "Statistical Methodology for Smoothing Insurance Claims",
+        "Developed advanced smoothing methods for insurance claims data using Kalman Filters.",
+        "Proposed innovative approaches for time-series modeling and forecasting of indemnities."
     )
 ) |>
     cvevents(when = "dates", what = "degree", where = "loc", details = "details")
@@ -158,20 +166,11 @@ tibble::tribble(
         "Developed and published the 'BoutaDe' R package on GitHub, enabling rapid, reproducible reporting workflows.",
         "Automated content generation with ChatGPT, dynamically tailoring text to outputs, metadata, and target audiences.",
         "Adapted reports for specific user roles (e.g., adolescents, adults, humorous tones) using metadata-driven customization.",
-        "Integrated advanced visualizations with ggplot2 and interactive dashboards using Shiny.",
-        "Streamlined collaboration and reproducibility through Git-based version control and Kubernetes-based deployments."
-    ),
-    "Master’s Thesis", "ENSAE engineer school - PARIS", "2019 - 2020", c(
-        "Developed novel statistical models for database fusion."
+        "Integrated advanced visualizations and dashboards."
     ),
     "Hackathon Winner", "EY Paris", "2018", c(
         "Led team of 4 to victory among  20 competing teams.",
         "Implemented solution using Random Forests in Python."
-    ),
-    "Master’s Thesis", "ENSAI engineer school - PARIS", "2014", c(
-        "Statistical Methodology for Smoothing Insurance Claims",
-        "Developed advanced smoothing methods for insurance claims data using Kalman Filters.",
-        "Proposed innovative approaches for time-series modeling and forecasting of indemnities."
     )
 ) |>
     cvevents(when = "dates", what = "project", where = "institution", details = "details")
