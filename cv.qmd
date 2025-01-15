@@ -130,7 +130,7 @@ tibble::tribble(
         "Time series analysis, sampling survey methodology"
     ),
     
-    "Engineering Degree in Statistics and p", "ENSAI - Rennes, France", "09/2011 - 08/2013", c(
+    "Engineering Degree in Statistics and Probabilities", "ENSAI - Rennes, France", "09/2011 - 08/2013", c(
         "Core curriculum in statistical methods and programming",
         "Specialized in data processing and analysis",
         "Teaching Assistant for Statistics and Python courses"
@@ -153,7 +153,6 @@ tibble::tribble(
         "Built interactive web applications with React (Observable) and GeoServer for result visualization.",
         "Tracked experiments using MLFlow and hosted the solution on INSEE's Kubernetes cluster."
     ),
-    
     "Automated Study Reporting System (BoutaDe)", "INSEE - Paris", "2021 - 2023", c(
         "Designed and implemented a comprehensive pipeline for automating study report production using R.",
         "Developed and published the 'BoutaDe' R package on GitHub, enabling rapid, reproducible reporting workflows.",
@@ -162,18 +161,15 @@ tibble::tribble(
         "Integrated advanced visualizations with ggplot2 and interactive dashboards using Shiny.",
         "Streamlined collaboration and reproducibility through Git-based version control and Kubernetes-based deployments."
     ),
-    
-    "Research Project", "ENSAE engineer school - PARIS", "2019 - 2020", c(
-        "Developed novel statistical models for database fusion.",
-        "Published findings in departmental research journal.",
-        "Presented results at student research symposium."
+    "Master’s Thesis", "ENSAE engineer school - PARIS", "2019 - 2020", c(
+        "Developed novel statistical models for database fusion."
     ),
-    
     "Hackathon Winner", "EY Paris", "2018", c(
         "Led team of 4 to victory among  20 competing teams.",
         "Implemented solution using Random Forests in Python."
     ),
-    "Master’s Thesis: Statistical Methodology for Smoothing Insurance Claims", "ENSAI engineer school - PARIS", "2020", c(
+    "Master’s Thesis", "ENSAI engineer school - PARIS", "2014", c(
+        "Statistical Methodology for Smoothing Insurance Claims",
         "Developed advanced smoothing methods for insurance claims data using Kalman Filters.",
         "Proposed innovative approaches for time-series modeling and forecasting of indemnities."
     )
