@@ -173,6 +173,11 @@ tibble::tribble(
         "Led team of 4 to victory among 50 \\% competing teams.",
         "Developed machine learning model with 85 \\% prediction accuracy.",
         "Implemented solution using Random Forests in Python."
+    ,
+    "Master’s Thesis: Statistical Methodology for Smoothing Insurance Claims", "ENSAI engineer school - PARIS", "2020", c(
+        "Developed advanced smoothing methods for insurance claims data using Kalman Filters.",
+        "Proposed innovative approaches for time-series modeling and forecasting of indemnities.",
+        "Presented findings to faculty and insurance industry professionals."
     )
 ) |>
     cvevents(when = "dates", what = "project", where = "institution", details = "details")
