@@ -139,7 +139,10 @@ tibble::tribble(
         "Master’s Thesis on statistical models for database fusion",
         "Deep learning, Reinforcement learning"
     ),
-    "Statistical Methodology Master", "University Rennes 2 - Rennes, France", "09/2018 - 08/2020", c(
+    "Engineering Degree in Data-Science","ENSAE - Paris France","09/2018 - 08/2020",c(
+        "Highest Honors"
+    ),
+    "Statistical Methodology Master", "University Rennes 2 - Rennes, France", "09/2013 - 08/2014", c(
         "Highest Honors",
         "Advanced coursework in statistical methods and data analysis",
         "Time series analysis, sampling survey methodology"
