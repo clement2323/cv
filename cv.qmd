@@ -10,7 +10,7 @@ cvcolor: 58748F #without `#`
 cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvmeta:
   - title: Status
-    left: Head of Statistical Service at  INSEE - French Caribbean.
+    left: Head of Statistical Service at French NSI, INSEE - French Caribbean.
     right: Guadeloupe, France
   - title: Field
     left: Data Science, Statistical Methods, Spatial Analysis 
@@ -83,7 +83,7 @@ tibble::tribble(
     "Head of Spatial Statistics \\& Data Confidentiality Methods", "INSEE - Paris", "09/2019 - 08/2023",
     "Paris, France", c(
         "Managed a team of 4 and supervised 3 interns specializing in satellite images analysis.",
-        "Developped deep learning models achieving high accuracy in satellite image segmentation for land cover detection.",
+        "Developed deep learning models achieving high accuracy in satellite image segmentation for land cover detection.",
         "Directed the redesign of a georeferencing system impacting 30 million address records.",
         "Designed and implemented an algorithm to ensure the confidentiality of gridded data across France, addressing differentiation attacks and enabling large-scale data dissemination.",
         "Supervised statistical disclosure control for 10 public annual INSEE surveys.",
@@ -91,14 +91,13 @@ tibble::tribble(
     ),
     "Data Science Intern", "WESTAT - Rockville MD, USA", "07/2019 - 09/2019",
     "Rockville, Maryland, USA", c(
-        "Developed innovative estimation methods for rare events using Zero-Inflated Poisson Models.",
         "Analyzed large-scale imbalanced datasets."
     ),
       "Household Survey Manager", "INSEE - Paris", "09/2017 - 08/2018",
     "Paris, France", c(
         "Contributed to the redesign of the Master Sample, representing the nationwide household sampling framework for INSEE surveys.",
-        "Conducted large-scale sampling simulations for the entirety of France using advanced sampling methods. The proposed solution, now deployed at INSEE, directly impacts the work of nearly 700 field interviewers.", 
-        "Worked closely with a team of five statisticians to parallelize processing workflows and analyze results, including variance estimation"
+        "Conducted large-scale sampling simulations using advanced sampling methods impacting the work of nearly 700 field interviewers.", 
+        "Worked closely with a team of five statisticians to parallelize processing workflows and analyze results"
     )
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
@@ -135,12 +134,12 @@ tibble::tribble(
     ~degree, ~loc, ~dates, ~details,
     "Master of Research in Mathematics, Vision and Learning (MVA)", "Polytechnique Paris", "09/2019 - 08/2020", c(
         "Highest Honors",
-        "Specialized in machine learning and computer vision",
-        "Master’s Thesis on statistical models for database fusion",
-        "Deep learning, Reinforcement learning"
+        "Specialized in computer vision, deep learning, reinforcement learning, kernel methods",
+        "Master's thesis on statistical models for database fusion"
     ),
     "Engineering Degree in Data-Science","ENSAE - Paris France","09/2018 - 08/2020",c(
-        "Highest Honors"
+        "Highest Honors",
+        "Specialized in Machine Learning"
     ),
     "Statistical Methodology Master", "University Rennes 2 - Rennes, France", "09/2013 - 08/2014", c(
         "Highest Honors",
@@ -150,7 +149,7 @@ tibble::tribble(
     "Engineering Degree in Statistics and Probabilities", "ENSAI - Rennes, France", "09/2011 - 08/2013", c(
         "Core curriculum in statistical methods and programming",
         "Teaching Assistant for Statistics and Python courses",
-        "Master’s Thesis on statistical Methodology for Smoothing Insurance Claims with time series analysis"
+        "Master's thesis on Statistical Methodology for Smoothing Insurance Claims with Time Series Analysis"
     )
 ) |>
     cvevents(when = "dates", what = "degree", where = "loc", details = "details")
@@ -158,21 +157,21 @@ tibble::tribble(
 
 # Projects
 ```{r}
-#| label: Projects & Achievements
+#| label: Projects and Achievements
 #| output: asis
 tibble::tribble(
     ~project, ~institution, ~dates, ~details,
     "Automated Satellite Image Analysis", "INSEE - Paris", "Present", c(
         "Developed a full pipeline to detect building locations from Pleiades satellite images.",
         "Trained SegFormer segmentation models for high-accuracy building detection.",
+        "Tracked experiments using MLFlow and hosted the solution on INSEE's Kubernetes cluster.",
         "Integrated a containerized workflow with Kubernetes (Argo Workflows and ArgoCD).",
-        "Built interactive web applications with React (Observable) and GeoServer for result visualization.",
-        "Tracked experiments using MLFlow and hosted the solution on INSEE's Kubernetes cluster."
+        "Built interactive web applications with React (Observable) and GeoServer for result visualization."
     ),
     "Automated Study Reporting System", "INSEE - Paris", "Present", c(
         "Designed and implemented a comprehensive pipeline for automating study report production using R.",
         "Developed and published the 'BoutadE' R package on GitHub, enabling rapid, reproducible reporting workflows.",
-        "Automated content generation with local LLMs.",
+        "Automated content generation with local LLMs hosted on INSEE's Kubernetes cluster.",
         "Integrated advanced visualizations and dashboards."
     ),
     "Hackathon Winner", "EY Paris", "2018", c(
