@@ -48,7 +48,7 @@
 \usepackage{$cvfont$}
 
 % set font default
-\renewcommand*\familydefault{\sfdefault} 	
+%\renewcommand*\familydefault{\sfdefault} 	
 \usepackage[T1]{fontenc}
 
 % more font size definitions
@@ -144,10 +144,17 @@
 \newcommand{\cvsection}[1]
 {
     \vspace{8pt}
-    \textcolor{black}{\large\textbf{#1}}\\[-5pt]
+    {
+        \textsc{\huge\expandafter\FirstLetter#1\relax}%
+        \textsc{\large\expandafter\RestLetters#1\relax}%
+    }\\[-5pt]
     \textcolor{black}{\hrule}
-    \vspace{6pt}
+    \vspace{12pt}
 }
+
+% Commandes auxiliaires pour extraire la première lettre et le reste
+\def\FirstLetter#1#2\relax{#1}
+\def\RestLetters#1#2\relax{#2}
 
 %
 \newcommand{\metasection}[2]
@@ -193,21 +200,24 @@
 % param 2:	event name (what did you do?)
 % param 3:	institution (where did you work / study)
 % param 4:	list of paragraphs
-%
+
 \newcommand{\cvevent}[4]
-{
+{ 
+\begin{minipage}{\textwidth}  % Englobe tout le contenu dans une minipage
+    \hspace{0.5cm}  % Décalage initial
+    \begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}}p{0.7\textwidth}r@{}}
+        {\fontfamily{ptm}\selectfont\textbf{#2}} & #1 \\[3pt]
+        {\fontfamily{ptm}\selectfont\small\textit{#3}} & \\[2pt]
+    \end{tabular*}
 
-\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
-	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
-\end{tabular*}
-
-\vspace{-8pt}
-\textcolor{softcol}{\hrule}
-\vspace{6pt}
-\foreach \desc in {#4}{
-	{\scalebox{0.67}{\textbullet}}\hspace{1em}  \desc\\[2.5pt]
-}
-\vspace{3pt}
+    \hspace{1cm}  % Décalage pour les bullet points
+    \begin{minipage}{0.9\textwidth}  % Minipage pour les bullet points
+        \foreach \desc in {#4}{
+            {\scalebox{0.67}{\textbullet}}\hspace{1.5em}\desc\\[4pt]
+        }
+    \end{minipage}
+\end{minipage}
+\vspace{3pt}  % Espace entre les événements
 }
 
 % creates a stretched box as 

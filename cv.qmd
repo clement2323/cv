@@ -62,11 +62,11 @@ cvskills <- function(tbl, category, skills) {
 
 
 
-# Profile
+# PROFILE
 
 Innovative Data Scientist with a strong foundation in spatial statistics, machine learning, and big data processing. Extensive experience developing and deploying data-driven solutions, including deep learning applications for satellite imagery analysis and automation of complex workflows. Actively seeking opportunities to join data science teams and driving innovation and tackling complex challenges in California’s dynamic tech ecosystem.
 
-# Professional Experience
+# EXPERIENCE
 
 ```{r}
 #| label: experience
@@ -106,7 +106,7 @@ tibble::tribble(
 
 
 
-# Skills
+# SKILLS
 ```{r}
 #| label: skills
 #| output: asis
