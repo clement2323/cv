@@ -71,7 +71,7 @@ tibble::tribble(
         "Managed INSEE agents, overseeing the coordination and execution of on-the-ground survey operations.",
         "Designed an R training program, aimed at improving the skills of 20 agents."
     ),
-    "Head of Spatial Statistics \\& Data Confidentiality Methods", "INSEE - Paris", "September 2019 - August 2023",
+    "Head of Spatial Statistics \\& Data Confidentiality Methods", "INSEE - Paris", "September 2020 - August 2023",
     "Paris, France", c(
         "Managed a team of 4 and supervised 3 interns specializing in satellite images analysis.",
         "Developed deep learning segmentation models achieving high accuracy in satellite image segmentation for land cover detection.",
@@ -101,7 +101,7 @@ tibble::tribble(
 skills_data <- tibble::tribble(
     ~category, ~skills,
     "Programming", "Python, R, SQL, Docker, Kubernetes, quarto (dashboard, presentations), Latex",
-    "Tools", "Git, QGIS, MLflow, Argo Workflows, ArgoCD, Ollama, Postgis, Geoserver, comfyui",
+    "Tools", "Git (CI/CD), QGIS, MLflow, Argo Workflows, ArgoCD, Ollama, Postgis, Geoserver, comfyui",
     "Web Development", "JavaScript, React, NextJS"
 )
 
@@ -194,7 +194,7 @@ language_data |>
 
 interest_data <- tibble::tribble(
   ~category,      ~skills,
-  "Surf", "Passionate surfer with extensive practice, skilled in weather forecasting and surf conditions analysis",
+  "Surfing", "Passionate surfer with extensive practice, skilled in weather forecasting and surf conditions analysis",
   "Chess", "Active tournament player (chess.com 1700), participating in collaborative events and community meetups",
   "Guitar", "Intermediate player performing in public, organized several jam sessions in Paris"
 )
