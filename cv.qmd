@@ -177,7 +177,7 @@ tibble::tribble(
 language_data <- tibble::tribble(
     ~category, ~skills,
     "French", "native",
-    "English", "(TOEIC 895/990) upperly advanced"
+    "English", "advanced (TOEIC 895/990)" 
 )
 
 language_data |>
