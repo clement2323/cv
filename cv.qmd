@@ -65,20 +65,20 @@ tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
     "Head of Statistical Service", "INSEE (French NSI) - French Caribbean (Guadeloupe, Martinique, Guiana)", "September 2023 - Present",
     "Guadeloupe, France", c(
-        "Developed and applied deep learning algorithms for population census by processing thousands of satellite images of overseas territories (including Réunion and Mayotte).",
-        "Developed a web application to visualize and interact with segmentation model results to support population census estimates.",
-        "Streamlined and automated production practices, coordinating all local teams.",
-        "Managed INSEE agents, overseeing the coordination and execution of on-the-ground survey operations.",
-        "Designed an R training program, aimed at improving the skills of 20 agents."
+        "Developed and applied deep learning algorithms for population census by processing thousands of satellite images of overseas territories (including Réunion and Mayotte)",
+        "Developed a web application to visualize and interact with segmentation model results to support population census estimates",
+        "Streamlined and automated production practices, coordinating all local teams",
+        "Managed INSEE agents, overseeing the coordination and execution of on-the-ground survey operations",
+        "Designed an R training program, aimed at improving the skills of 20 agents"
     ),
     "Head of Spatial Statistics \\& Data Confidentiality Methods", "INSEE - Paris", "September 2020 - August 2023",
     "Paris, France", c(
-        "Managed a team of 4 and supervised 3 interns specializing in satellite images analysis.",
-        "Developed deep learning segmentation models achieving high accuracy in satellite image segmentation for land cover detection.",
-        "Directed the redesign of a georeferencing system impacting 30 million address records.",
-        "Designed and implemented an algorithm to ensure the confidentiality of gridded data across France, addressing differentiation attacks and enabling large-scale data dissemination.",
-        "Supervised statistical disclosure control for 10 public annual INSEE surveys.",
-        "Collaborated with European countries in working groups to harmonize methodologies for spatial analysis and statistical disclosure control at the European level."
+        "Managed a team of 4 and supervised 3 interns specializing in satellite images analysis",
+        "Developed deep learning segmentation models achieving high accuracy in satellite image segmentation for land cover detection",
+        "Directed the redesign of a georeferencing system impacting 30 million address records",
+        "Designed and implemented an algorithm to ensure the confidentiality of gridded data across France, addressing differentiation attacks and enabling large-scale data dissemination",
+        "Supervised statistical disclosure control for 10 public annual INSEE surveys",
+        "Collaborated with European countries in working groups to harmonize methodologies for spatial analysis and statistical disclosure control at the European level"
     ),
     "Data Science Intern", "WESTAT - Rockville MD, USA", "July 2019 - September 2019",
     "Rockville, Maryland, USA", c(
@@ -87,7 +87,7 @@ tibble::tribble(
       "Household Survey Manager", "INSEE - Paris", "September 2017 - August 2018",
     "Paris, France", c(
         "Contributed to the redesign of the nationwide household sampling framework for INSEE surveys.",
-        "Conducted large-scale sampling simulations using advanced sampling methods impacting the work of nearly 700 field interviewers."
+        "Conducted large-scale sampling simulations using advanced sampling methods impacting the work of nearly 700 field interviewers"
     )
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
@@ -145,25 +145,25 @@ tibble::tribble(
 tibble::tribble(
     ~project, ~institution, ~dates, ~details,
     "Automated Satellite Image Analysis", "INSEE - Paris", "Present", c(
-        "Developed a full pipeline to detect building locations from Pleiades satellite images.",
-        "Trained SegFormer segmentation models for high-accuracy building detection.",
-        "Tracked experiments using MLFlow and hosted the solution on INSEE's Kubernetes cluster.",
-        "Integrated a containerized workflow with Kubernetes (Argo Workflows and ArgoCD).",
-        "Built interactive web applications with React (Observable) and GeoServer for result visualization."
+        "Developed a full pipeline to detect building locations from Pleiades satellite images",
+        "Trained SegFormer segmentation models for high-accuracy building detection",
+        "Tracked experiments using MLFlow and hosted the solution on INSEE's Kubernetes cluster",
+        "Integrated a containerized workflow with Kubernetes (Argo Workflows and ArgoCD)",
+        "Built interactive web applications with React (Observable) and GeoServer for result visualization"
     ),
     "Automated Study Reporting System", "INSEE - Paris", "Present", c(
-        "Designed and implemented a comprehensive pipeline for automating study report production using R.",
-        "Developed and published the 'BoutadE' R package on GitHub, enabling rapid, reproducible reporting workflows.",
-        "Automated content generation with local LLMs hosted on INSEE's Kubernetes cluster.",
-        "Integrated advanced visualizations and dashboards."
+        "Designed and implemented a comprehensive pipeline for automating study report production using R",
+        "Developed and published the 'BoutadE' R package on GitHub, enabling rapid, reproducible reporting workflows",
+        "Automated content generation with local LLMs hosted on INSEE's Kubernetes cluster",
+        "Integrated advanced visualizations and dashboards"
     ),
        "Chess Opening Tree", "Personal Project", "2024", c(
         "Developed a NextJS application to create visual chess opening trees for memorization",
         "Implemented interactive visualization with one position per branch" 
     ),
     "Hackathon Winner", "EY Paris", "2018", c(
-        "Led team of 4 to victory among  20 competing teams.",
-        "Implemented solution using Random Forests in Python."
+        "Led team of 4 to victory among  20 competing teams",
+        "Implemented solution using Random Forests in Python"
     )
 ) |>
     cvevents(when = "dates", what = "project", where = "institution", details = "details")
