@@ -1,7 +1,7 @@
 ---
 author: Clement Guillo
 title: Data Scientist
-profile: "Innovative Data Scientist skilled in spatial statistics, ML, and big data. Experienced in deep learning for satellite imagery and workflow automation. Seeking to drive data-driven innovation in California."
+profile: "Innovative Data Scientist skilled in spatial statistics, ML, and big data. Experienced in deep learning for satellite imagery and workflow automation. Looking for a position as a Data Scientist in California."
 phone: "+33 6 19 93 25 36"
 email: "guillo.clement@gmail.com"
 github: "github.com/clement2323"
@@ -63,7 +63,7 @@ cvskills <- function(tbl, category, skills) {
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details, ~tasks,
-    "Head of Statistical Service", "French NSI (INSEE) - French Caribbean (Guadeloupe, Martinique, Guiana)", "September 2023 - Present",
+    "Head of Statistical Service", "INSEE (French NSI) - French Caribbean (Guadeloupe, Martinique, Guiana)", "September 2023 - Present",
     "Guadeloupe, France", c(
         "Developed and applied deep learning algorithms for population census by processing thousands of satellite images of overseas territories (including Réunion and Mayotte).",
         "Developed a web application to visualize and interact with segmentation model results to support population census estimates.",
