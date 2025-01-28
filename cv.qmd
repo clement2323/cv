@@ -101,7 +101,7 @@ tibble::tribble(
 skills_data <- tibble::tribble(
     ~category, ~skills,
     "Programming", "Python, R, SQL, Docker, Kubernetes, quarto (dashboard, presentations), Latex",
-    "Tools", "Git (CI/CD), QGIS, MLflow, Argo Workflows, ArgoCD, Ollama, Postgis, Geoserver, comfyui",
+    "Tools", "Git (CI/CD), QGIS, MLflow, Argo Workflows, ArgoCD, Ollama, Postgis, Geoserver, Comfyui",
     "Web Development", "JavaScript, React, NextJS"
 )
 
@@ -118,7 +118,7 @@ tibble::tribble(
     ~degree, ~loc, ~dates, ~details,
     "Master of Science in Mathematics, Vision and Learning (MVA)", "Polytechnique Institute Paris", "September 2019 - August 2020", c(
         "Highest Honors",
-        "Specialized in computer vision, Deep Learning, Reinforcement Learning",
+        "Specialized in Computer vision, Deep Learning, Reinforcement Learning",
         "Master's thesis on statistical models for database fusion"
     ),
     "Engineering Degree in Data-Science","ENSAE - Paris France","September 2018 - August 2020",c(
