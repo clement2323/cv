@@ -1,7 +1,7 @@
 ---
 author: Clement Guillo
 title: Data Scientist
-profile: "Innovative Data Scientist skilled in spatial statistics, ML, and big data. Experienced in deep learning for satellite imagery and workflow automation. Looking for a position as a Data Scientist in California."
+profile: "Machine Learning Engineer with expertise in spatial statistics, Deep Learning for satellite imagery, and workflow automation. Looking for an AI/ML position in California"
 phone: "+33 6 19 93 25 36"
 email: "guillo.clement@gmail.com"
 github: "github.com/clement2323"
