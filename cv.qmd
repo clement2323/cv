@@ -195,7 +195,7 @@ language_data |>
 interest_data <- tibble::tribble(
   ~category,      ~skills,
   "Surfing", "Passionate surfer with extensive practice, skilled in weather forecasting and surf conditions analysis",
-  "Chess", "Active tournament player (chess.com 1700), participating in collaborative events and community meetups",
+  "Chess", "Active tournament player, participating in collaborative events and community meetups",
   "Guitar", "Intermediate player performing in public, organized several jam sessions in Paris"
 )
 interest_data |>
